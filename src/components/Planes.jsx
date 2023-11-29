@@ -1,7 +1,7 @@
 const Planes = () => {
   return (
     <>
-      <div className="container mx-auto my-14">
+      <div className="container mx-auto mt-14">
         <h1 className="text-center text-pink-gray font-bold font-poppins text-2xl mb-8">
           ¿Ya conocias nuestros planes?
         </h1>
