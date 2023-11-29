@@ -1,11 +1,16 @@
-import './App.css'
-import ClientLayout from './layouts/clientLayout'
 
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
 
+const App = () => {
   return (
-      <ClientLayout/>    
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="*" element={<p>Error</p>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
-export default App;
+export default App
