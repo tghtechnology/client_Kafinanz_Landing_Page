@@ -1,20 +1,25 @@
 
 const OurServices = () => {
   return (
-    <section className="grid 1xl:grid-cols-4 h-[298px]">
-        <div className="flex p-14 justify-center items-center bg-pink-gray">
-          <p className="[text-wrap:balance] w-[240px] text-2xl font-semibold text-center text-white">Copia de seguridad en la nube.</p>
-        </div>
-        <div className="flex p-14 justify-center items-center bg-purple-black">
-          <p className="[text-wrap:balance] w-[240px] text-2xl font-semibold text-center text-white">Acceso a documentos originales en todo momento.</p>
-        </div>
-        <div className="flex p-14 justify-center items-center bg-blue-dark">
-          <p className="[text-wrap:balance] w-[240px] text-2xl font-semibold text-center text-white">Ahorro en costos al no contratar personal contable fijo.</p>
-        </div>
-        <div className="flex p-14 justify-center items-center bg-orange-ligth">
-          <p className=" w-[240px] 1xl:w-[300px] text-2xl font-semibold text-center text-white">Enfoque en tus actividades comerciales mientras nosotros manejamos la contabilidad.</p>
-        </div>
-    </section>
+    <div>
+      <div className="max-w-7xl mx-auto my-5 px-2">
+        <h3 className="text-2xl text-pink-gray font-semibold text-center sm:text-start sm:w-max border-b-4 border-pink-gray">Ventajas de nuestros servicios</h3>
+      </div>
+      <section className="grid sm:grid-cols-2 md:grid-cols-4 text-2xl text-center font-semibold text-white md:h-72 md:max-h-72 3xl:max-w-7xl 3xl:mx-auto">
+        <article className="bg-pink-gray grid place-content-center px-3 py-4 md:p-0 h-52 md:h-auto">
+          <p className="md:max-w-[280px]">Copia de seguridad en la nube.</p>
+        </article>
+        <article className="bg-purple-black grid place-content-center px-3 py-4 md:p-0 h-52 md:h-auto">
+          <p className="md:max-w-[280px]">Acceso a documentos originales en todo momento.</p>
+        </article>
+        <article className="bg-blue-dark grid place-content-center px-3 py-4 md:p-0 h-52 md:h-auto">
+          <p className="md:max-w-[280px]">Ahorro en costos al no contratar personal contable fijo.</p>
+        </article>
+        <article className="bg-orange-ligth grid place-content-center px-3 py-4 md:p-0 h-52 md:h-auto">
+          <p className="md:max-w-[280px]">Enfoque en tus actividades comerciales mientras nosotros manejamos la contabilidad.</p>
+        </article>
+      </section>
+    </div>
   )
 }
 
