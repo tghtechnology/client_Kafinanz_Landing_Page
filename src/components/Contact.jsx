@@ -1,13 +1,13 @@
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const Contact = () => {
-  // const confServices = {
-  //   service: import.meta.env.VITE_SERVICE_CODE,
-  //   template: import.meta.env.VITE_YOUR_TEMPLATE_ID,
-  //   key: import.meta.env.VITE_YOUR_PUBLIC_KEY,
-  // };
+  const confServices = {
+    service: import.meta.env.VITE_SERVICE_CODE,
+    template: import.meta.env.VITE_YOUR_TEMPLATE_ID,
+    key: import.meta.env.VITE_YOUR_PUBLIC_KEY,
+  };
 
   const [values, setValues] = useState({
     fullname: "",
@@ -24,126 +24,132 @@ const Contact = () => {
     });
   };
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  //   if (Object.values(values).includes("")) {
-  //     toast("Complete todos los campos", { type: "error" });
-  //     return;
-  //   }
+    if (Object.values(values).includes("")) {
+      toast("Complete todos los campos", { type: "error" });
+      return;
+    }
 
-  //   emailjs
-  //     .sendForm(
-  //       confServices.service,
-  //       confServices.template,
-  //       form.current,
-  //       confServices.key
-  //     )
-  //     .then(
-  //       (result) => {
-  //         toast("Mensaje enviado con exito " + result.text, {
-  //           type: "success",
-  //         });
-  //         setValues({
-  //           fullname: "",
-  //           email: "",
-  //           company: "",
-  //           phone: "",
-  //           message: "",
-  //         });
-  //       },
-  //       (error) => {
-  //         toast(error.text, { type: "error" });
-  //         setValues({
-  //           fullname: "",
-  //           email: "",
-  //           company: "",
-  //           phone: "",
-  //           message: "",
-  //         });
-  //       }
-  //     );
-  // };
-
-
+    emailjs
+      .sendForm(
+        confServices.service,
+        confServices.template,
+        form.current,
+        confServices.key
+      )
+      .then(
+        (result) => {
+          toast("Mensaje enviado con exito " + result.text, {
+            type: "success",
+          });
+          setValues({
+            fullname: "",
+            email: "",
+            company: "",
+            phone: "",
+            message: "",
+          });
+        },
+        (error) => {
+          toast(error.text, { type: "error" });
+          setValues({
+            fullname: "",
+            email: "",
+            company: "",
+            phone: "",
+            message: "",
+          });
+        }
+      );
+  };
   const form = useRef();
 
-
   return (
-    <section className="w-full mx-auto md:w-1/2 relative mt-8 md:my-16">
-      <form
-        ref={form}
-        // onSubmit={sendEmail}
-        className="p-4 md:p-1 gap-3 grid md:grid-cols-2 z-20"
-      >
-        <div className="">
-          <input
-            className="block w-full p-2 border-b-2 border-r-2 border-pink-gray outline-none"
-            type="text"
-            value={values.fullname}
-            name="fullname"
-            id="fullname"
-            onChange={getAllValues}
-            placeholder="Nombre Completo"
-          />
+    <>
+      <div className="text-center m-10">
+        <h2 className="underline text-[#9621B8] font-bold">
+          CONTÁCTATE CON NOSOTROS
+        </h2>
+        <p>Una solución contable adaptada a tu empresa.</p>
+      </div>
+
+      <section className="flex w-full justify-center mx-auto flex-col md:flex-row gap-4">
+        <div className="flex justify-center md:col-span-1 mb-4 ">
+          <img src="/image/contact1.png" alt="Image contact" />
         </div>
-        <div className="">
-          <label className="text-lg font-semibold" htmlFor="email"></label>
-          <input
-            className="block w-full p-2 border-b-2 border-r-2 border-pink-gray outline-none"
-            type="email"
-            id="email"
-            value={values.email}
-            name="email"
-            onChange={getAllValues}
-            placeholder="Correo"
-          />
-        </div>
-        <div className="">
-          <input
-            className="block w-full p-2 border-b-2 border-r-2 border-pink-gray outline-none"
-            type="text"
-            id="company"
-            value={values.company}
-            name="company"
-            onChange={getAllValues}
-            placeholder="Telefono"
-          />
-        </div>
-        <div className="">
-          <input
-            className="block w-full p-2 border-b-2 border-r-2 border-pink-gray outline-none"
-            type=""
-            id="phone"
-            value={values.phone}
-            name="phone"
-            onChange={getAllValues}
-            placeholder="Departamento"
-          />
-        </div>
-        <div className="md:col-span-2">
-          <textarea
-            className="block w-full p-2 border-b-2 border-r-2 border-pink-gray sm:h-32 outline-none"
-            id="message"
-            name="message"
-            value={values.message}
-            onChange={getAllValues}
-            placeholder="Descripción del mensaje"
-          />
-        </div>
-        <div className="md:col-start-2 flex md:justify-end">
-          <input
-            className="bg-blue-600 text-lg font-semibold text-white w-full md:w-max p-2 md:px-5 rounded-md cursor-pointer transition-colors duration-200 hover:bg-blue-800"
-            type="submit"
-          />
-        </div>
-      </form>
-      <img
-        className="mx-auto absolute -bottom-0 -left-80 z-10 max-w-sm hidden md:block"
-        src="/image/contact.svg"
-        alt="Image contact"
-      />
-    </section>
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="w-full max-w-[780px] grid gap-4 md:grid-cols-2"
+        >
+          <div className="">
+            <label className="text-lg font-semibold" htmlFor="name"></label>
+            <input
+              className="block w-full p-2 border-b-2 border-r-2  border-[#9621B8] outline-none"
+              type="text"
+              value={values.fullname}
+              name="fullname"
+              id="fullname"
+              onChange={getAllValues}
+              placeholder="Nombre Completo"
+            />
+          </div>
+          <div className="">
+            <label className="text-lg font-semibold" htmlFor="email"></label>
+            <input
+              className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
+              type="email"
+              id="email"
+              value={values.email}
+              name="email"
+              onChange={getAllValues}
+              placeholder="Correo"
+            />
+          </div>
+          <div className="">
+            <input
+              className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
+              type="text"
+              id="company"
+              value={values.company}
+              name="company"
+              onChange={getAllValues}
+              placeholder="Departamento"
+            />
+          </div>
+          <div className="">
+            <input
+              className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
+              type="number"
+              id="phone"
+              value={values.phone}
+              name="phone"
+              onChange={getAllValues}
+              placeholder="Telefono"
+            />
+          </div>
+          <div className="h-[247px] md:col-span-2">
+            <label className="text-lg font-semibold" htmlFor="message"></label>
+            <textarea
+              className="block h-full w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
+              id="message"
+              name="message"
+              value={values.message}
+              onChange={getAllValues}
+              placeholder="Descripcion del Mensaje"
+            />
+          </div>
+          <div className="">
+            <input
+              className="bg-yellow-dark text-lg font-semibold text-white w-full md:w-max p-2 md:px-2 rounded-md cursor-pointer "
+              type="submit"
+            />
+          </div>
+        </form>
+      </section>
+    </>
   );
 };
 
