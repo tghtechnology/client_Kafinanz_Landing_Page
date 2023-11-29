@@ -1,8 +1,59 @@
-
 const Info = () => {
   return (
-    <div>Info</div>
-  )
-}
+    <section className="">
+      <div className="bg-[url('/image/fondo-info.png')] 1xl:h-[1200px] bg-no-repeat 1xl:bg-contain relative">
+        <div className=" grid place-content-center h-full">
+          <div className="flex justify-between gap-10 flex-row-reverse">
+            <img
+              src="/image/Group-47.png"
+              alt="imagen-group"
+              width={750}
+              height={750}
+              className=""
+            />
+            <div className="">
+              <div className="my-6">
+                <h2 className="font-bold text-2xl">
+                  RECOPILACIÓN Y ENTREGA DE INFORMACIÓN
+                </h2>
+                <div className="border-4 rounded-full mr-40"></div>
+              </div>
 
-export default Info
+              <ul
+                role="list"
+                className="flex flex-col gap-8 list-disc marker:text-yellow-dark marker:text-2xl ml-6 mt-8"
+              >
+                <li>
+                  <h3 className="font-semibold">Contable:</h3>
+                  <p className="">
+                    Recopilación digital, visitas, y comunicación constante.
+                  </p>
+                </li>
+                <li>
+                  <h3 className="font-semibold">Tributaria:</h3>
+                  <p className="">
+                    Fechas de cierre, reportes mensuales de liquidaciones de
+                    impuestos.
+                  </p>
+                </li>
+                <li>
+                  <h3 className="font-semibold">Laboral:</h3>
+                  <p className="">Cálculo y cierre mensual de planilla.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <img
+          src="/image/Group-48.png"
+          alt="image-group-48"
+          width={100}
+          height={"auto"}
+          className="absolute right-[100px] top-[900px]"
+        />
+      </div>
+    </section>
+  );
+};
+
+export default Info;
