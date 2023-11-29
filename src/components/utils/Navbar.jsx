@@ -1,27 +1,24 @@
-import React from 'react'
+
 
 const Navbar = () => {
   return (
     <div className="bg-[#A63884] max-w-[1800px] mx-auto z-50">
-            <div className="">
-                <ul className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
-                    <li>
-                    ¿Por que elejirnos?
-                    </li>
-
-                    <li>
-                    Nuestro Servicio
-                    </li>
-                    
-                    <li>
-                    <button>
-                            Presupuesto
-                        </button>
-                    </li>
-                </ul>
-            </div>
+      <nav className="flex flex-row justify-between items-center p-8">
+        <img src="/image/K-Logo.svg" alt="Logo" className="max-w-full" />
+        <div>
+          <a href="#home" className="px-4">
+            ¿Por qué elegirnos? 
+          </a>
+          <a href="#contact" className=" px-4">
+            Nuestros Servicios
+          </a>
+          <button href="#about" className="px-4 p-4 text-white bg-orange-ligth rounded-sm">
+            Presupuesto
+          </button>
+        </div>
+      </nav>
     </div>
-  )
+  );
 }
 
 export default Navbar

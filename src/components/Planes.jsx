@@ -5,13 +5,13 @@ const Planes = () => {
         <h1 className="text-center text-pink-gray font-bold font-poppins text-2xl mb-8">
           ¿Ya conocias nuestros planes?
         </h1>
-        <div className="flex flex-col sm:flex-row p-4  justify-between items-start ">
+        <div className="flex flex-col sm:flex-row p-4  justify-between items-start gap-5">
           {/* Primera */}
-          <div className="w-1/2 max-h-full">
-            <h3 className="uppercase border-b-4 border-pink-gray text-pink-gray font-bold mx-auto text-center">
+          <div className="w-full md:w-1/2 max-h-full">
+            <h3 className="uppercase border-b-4 border-pink-gray w-max text-pink-gray font-bold mx-auto text-center">
               Mensual
             </h3>
-            <ul className="list-disc ">
+            <ul className="list-disc">
               <li>Cálculo de impuestos</li>
               <li>Asesoría Tributaria</li>
               <li>Elaboración y cálculo de Planilla</li>
@@ -19,13 +19,13 @@ const Planes = () => {
             </ul>
           </div>
 
-          {/* <div className="md:hidden">
+          <div className="hidden">
             <div className="w-1 h-[15vh] bg-pink-gray opacity-60 "></div>
-          </div> */}
+          </div>
 
           {/* Segunda */}
-          <div className="w-1/2 max-h-full">
-            <h3 className="uppercase border-b-4 border-pink-gray text-pink-gray font-bold mx-auto text-center">
+          <div className="w-full md:w-1/2 max-h-full">
+            <h3 className="uppercase border-b-4 border-pink-gray w-max text-pink-gray font-bold mx-auto text-center">
               Anual
             </h3>
             <ul className="list-disc">
