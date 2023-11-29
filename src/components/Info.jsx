@@ -1,22 +1,22 @@
 const Info = () => {
     return (
         <section className="my-8">
-            <div className="bg-[url('/image/fondo-info.png')] 1xl:h-[1200px] bg-no-repeat 1xl:bg-contain relative">
-                <div className="sobre-nosotros absolute bottom-[400px]">
-                    <div className="contenedor sobre-nosotros-grid relative ">
+            <div className="bg-[url('/image/fondo-info.png')] 1xl:h-[1000px] bg-no-repeat 1xl:bg-contain">
+                <div></div>
+                <div className="inline-block bg-gradient-to-r from-[#0008] via-[#0008] via-70% to-70% mt-40">
+                    <div className="sobre-nosotros-grid">
                         <img
                             src="/image/Group-47.png"
                             alt="imagen-group"
                             width={750}
                             height={750}
-                            className="ima absolute bottom-[-10px]"
                         />
                         <div className="texto-nosotros">
                             <div className="my-6">
                                 <h2 className=" font-bold text-2xl">
                                     RECOPILACIÓN Y ENTREGA DE INFORMACIÓN
                                 </h2>
-                                <div className="border-4 rounded-full mr-40"></div>
+                                <div className="border-4 rounded-full mr-30"></div>
                             </div>
 
                             <ul
@@ -54,7 +54,7 @@ const Info = () => {
                     alt="image-group-48"
                     width={100}
                     height={"auto"}
-                    className="absolute right-[100px] top-[900px]"
+                    className="mt-10 ml-[1500px]"
                 />
             </div>
         </section>

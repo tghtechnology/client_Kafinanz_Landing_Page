@@ -1,7 +1,7 @@
 
 const OurServices = () => {
   return (
-    <section className="grid 1xl:grid-cols-4 h-[298px]">
+    <section className="grid 1xl:grid-cols-4">
         <div className="flex p-14 justify-center items-center bg-pink-gray">
           <p className="[text-wrap:balance] w-[240px] text-2xl font-semibold text-center text-white">Copia de seguridad en la nube.</p>
         </div>

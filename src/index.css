@@ -3,44 +3,21 @@
 @tailwind utilities;
 
 /** Bloque Nosotros */
-.sobre-nosotros {
-    /*! esto es de un background-image, no de un background-color */
-    background-image: linear-gradient( to bottom, transparent 50%, #037bc0 50%, #037bc0 100% );
-    background-position: center, top left;
-    background-repeat: no-repeat;
-    background-size: 100%, 70rem;
-}
-
-@media (min-width: 768px) { 
-    .sobre-nosotros {
-        /** hacia la derecha: de izquierda 0% - 50% transparente y de 50% - 100% azul */
-        background-image: linear-gradient( to right, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 70%, transparent 0% );
-        background-position: right center ;
-        /* padding: 10rem 0; */
-        background-size: 100%, 180rem;
-    }
-}
-
-@media (min-width: 1000px) { 
-    .sobre-nosotros {
-        background-size: 100%, 40rem;
-    }
-}
 
 .sobre-nosotros-grid {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center; /* Centra horizontalmente */
 }
 @media (min-width: 768px) { 
     .sobre-nosotros-grid {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: unset;/*! para desabilitar alguna propiedad usamos "unset" */
-        
+        grid-template-rows: unset;
+        align-items: center;
+        justify-items: center; /* Centra horizontalmente */
     }
 }
-
-
-
 .texto-nosotros {
     grid-row: 1 / 2;
     color: #FFF;
@@ -60,4 +37,3 @@
         margin-left: 6rem;
     }
 }
-
