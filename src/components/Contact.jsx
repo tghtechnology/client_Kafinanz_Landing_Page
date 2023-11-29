@@ -85,7 +85,6 @@ const Contact = () => {
           className="w-full max-w-[780px] grid gap-4 md:grid-cols-2"
         >
           <div className="">
-            <label className="text-lg font-semibold" htmlFor="name"></label>
             <input
               className="block w-full p-2 border-b-2 border-r-2  border-[#9621B8] outline-none"
               type="text"
@@ -97,7 +96,6 @@ const Contact = () => {
             />
           </div>
           <div className="">
-            <label className="text-lg font-semibold" htmlFor="email"></label>
             <input
               className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
               type="email"
@@ -108,17 +106,7 @@ const Contact = () => {
               placeholder="Correo"
             />
           </div>
-          <div className="">
-            <input
-              className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
-              type="text"
-              id="company"
-              value={values.company}
-              name="company"
-              onChange={getAllValues}
-              placeholder="Departamento"
-            />
-          </div>
+
           <div className="">
             <input
               className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
@@ -130,8 +118,14 @@ const Contact = () => {
               placeholder="Telefono"
             />
           </div>
+          <div className="">
+            <select className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none bg-white" >
+              <option value="">Departamento</option>
+              <option value="">Departamento</option>
+              <option value="">Departamento</option>
+            </select>
+          </div>
           <div className="h-[247px] md:col-span-2">
-            <label className="text-lg font-semibold" htmlFor="message"></label>
             <textarea
               className="block h-full w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
               id="message"
