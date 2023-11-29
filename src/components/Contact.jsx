@@ -75,14 +75,14 @@ const Contact = () => {
         <p>Una solución contable adaptada a tu empresa.</p>
       </div>
 
-      <section className="flex w-full justify-center mx-auto flex-col md:flex-row">
+      <section className="flex w-full justify-center mx-auto flex-col md:flex-row gap-4">
         <div className="flex justify-center md:col-span-1 mb-4 ">
           <img src="/image/contact1.png" alt="Image contact" />
         </div>
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="w-full max-w-[780px]"
+          className="w-full max-w-[780px] grid gap-4 md:grid-cols-2"
         >
           <div className="">
             <label className="text-lg font-semibold" htmlFor="name"></label>
@@ -96,7 +96,7 @@ const Contact = () => {
               placeholder="Nombre Completo"
             />
           </div>
-          <div className="col-start-2">
+          <div className="">
             <label className="text-lg font-semibold" htmlFor="email"></label>
             <input
               className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
@@ -130,10 +130,10 @@ const Contact = () => {
               placeholder="Telefono"
             />
           </div>
-          <div className="col-span-2">
+          <div className="h-[247px] md:col-span-2">
             <label className="text-lg font-semibold" htmlFor="message"></label>
             <textarea
-              className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] sm:h-32 outline-none"
+              className="block h-full w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
               id="message"
               name="message"
               value={values.message}
@@ -141,7 +141,7 @@ const Contact = () => {
               placeholder="Descripcion del Mensaje"
             />
           </div>
-          <div className="md:col-start-2 flex md:justify-end">
+          <div className="">
             <input
               className="bg-yellow-dark text-lg font-semibold text-white w-full md:w-max p-2 md:px-2 rounded-md cursor-pointer "
               type="submit"
