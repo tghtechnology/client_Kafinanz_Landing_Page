@@ -3,7 +3,7 @@ import Advantages from "../components/Advantages";
 import ChooseUs from "../components/ChooseUs";
 import Contact from "../components/Contact";
 import Header from "../components/Header";
-// import Info from "../components/Info";
+import Info from "../components/Info";
 import OurServices from "../components/OurServices";
 import Planes from "../components/Planes";
 import ServiceDetails from "../components/ServiceDetails";
@@ -22,7 +22,7 @@ const Home = () => {
             <ServiceDetails/>
             <Advantages/>
             <OurServices/>
-            {/* <Info/> */}
+            <Info/>
             <Contact/>
         </main>
         <Footer/>

@@ -2,7 +2,6 @@
 const Header = () => {
   return (
     <div className="bg-[url(/image/bg-header.webp)] bg-no-repeat bg-auto h-[70vh] ">
-      {/* <img src="/image/bg-header.webp" alt="fondo de cabezera" /> */}
 
       <div className="flex h-full">
           <div className="h-full ">
