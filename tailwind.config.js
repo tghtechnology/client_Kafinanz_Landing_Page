@@ -16,10 +16,11 @@ export default {
       'orange-ligth': '#EA3D1A',
       'yellow-dark':'#FFA401',
       'indigo-black': '#37298C',
-      'purple-black': '#5C0742'
+      'purple-black': '#5C0742',
+      'white': '#FFFFFF'
     },
     screens: {
-      '1xl': '1440px'
+      '1xl': '1440px',
     }
   },
   plugins: [],
