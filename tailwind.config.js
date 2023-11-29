@@ -16,7 +16,8 @@ export default {
       'orange-ligth': '#EA3D1A',
       'yellow-dark':'#FFA401',
       'indigo-black': '#37298C',
-      'purple-black': '#5C0742'
+      'purple-black': '#5C0742',
+      'white': '#FFFF'
     },
     screens: {
       '1xl': '1440px',
@@ -25,6 +26,7 @@ export default {
       'lg': '1024px',
       'xl': '1280px',
       '2xl': '1536px',
+      '3xl': '2100px'
     }
   },
   plugins: [],
