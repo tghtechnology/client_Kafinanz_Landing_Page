@@ -1,6 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { toast } from "react-toastify";
+import { depart } from "../data/depart";
 
 const Contact = () => {
   const confServices = {
@@ -69,13 +70,13 @@ const Contact = () => {
   return (
     <>
       <div className="text-center m-10">
-        <h2 className="underline text-[#9621B8] font-bold">
+        <h2 className="underline text-[#9621B8] font-bold my-3">
           CONTÁCTATE CON NOSOTROS
         </h2>
         <p>Una solución contable adaptada a tu empresa.</p>
       </div>
 
-      <section className="flex w-full justify-center mx-auto flex-col md:flex-row gap-4">
+      <section className="flex w-full justify-center mx-auto flex-col md:flex-row gap-4 mb-4">
         <div className="flex justify-center md:col-span-1 mb-4 ">
           <img src="/image/contact1.png" alt="Image contact" />
         </div>
@@ -85,7 +86,6 @@ const Contact = () => {
           className="w-full max-w-[780px] grid gap-4 md:grid-cols-2"
         >
           <div className="">
-            <label className="text-lg font-semibold" htmlFor="name"></label>
             <input
               className="block w-full p-2 border-b-2 border-r-2  border-[#9621B8] outline-none"
               type="text"
@@ -97,7 +97,6 @@ const Contact = () => {
             />
           </div>
           <div className="">
-            <label className="text-lg font-semibold" htmlFor="email"></label>
             <input
               className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
               type="email"
@@ -116,23 +115,24 @@ const Contact = () => {
               value={values.company}
               name="company"
               onChange={getAllValues}
-              placeholder="Departamento"
-            />
-          </div>
-          <div className="">
-            <input
-              className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
-              type="number"
-              id="phone"
-              value={values.phone}
-              name="phone"
-              onChange={getAllValues}
               placeholder="Telefono"
             />
           </div>
+          <div className="">
+            {/* Seleccionar Departamento */}
+            <select className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none bg-white">
+              <option value="" >
+                Departamentos
+              </option>
+              {depart.map((depart) => (
+                <option key={depart.id} value={depart.nombre}>
+                  {depart.nombre}
+                </option>
+              ))}
+            </select>
+          </div>
           <div className="h-[247px] md:col-span-2">
-            <label className="text-lg font-semibold" htmlFor="message"></label>
-            <textarea
+            <textarea 
               className="block h-full w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
               id="message"
               name="message"
@@ -141,9 +141,10 @@ const Contact = () => {
               placeholder="Descripcion del Mensaje"
             />
           </div>
-          <div className="">
+
+          <div className="flex justify-end md:col-span-2">
             <input
-              className="bg-yellow-dark text-lg font-semibold text-white w-full md:w-max p-2 md:px-2 rounded-md cursor-pointer "
+              className="bg-yellow-dark text-lg font-semibold text-white  w-full md:w-max p-2 md:px-9   rounded-md cursor-pointer "
               type="submit"
             />
           </div>

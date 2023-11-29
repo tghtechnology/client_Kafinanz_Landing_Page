@@ -26,4 +26,4 @@ const depart = [
  { id: 25, nombre: "Ucayali" },
 ]
 
-export default depart;
+export { depart };
