@@ -7,7 +7,7 @@ const OurServices = () => {
           Ventajas de nuestros servicios
         </h3>
       </div>
-      <section className="grid sm:grid-cols-2 md:grid-cols-4 text-2xl text-center font-semibold text-white h-full max-h-[800px] md:h-[500px] 3xl:max-w-7xl 3xl:mx-auto px-2 gap-x-4 gap-y-4">
+      <section className="grid sm:grid-cols-2 md:grid-cols-4 text-2xl text-center font-semibold text-white h-full max-h-[800px] md:h-[300px] 3xl:max-w-7xl 3xl:mx-auto px-2 gap-x-4 gap-y-4">
         <article className="bg-clip-bg bg-gradient-to-b from-[#4C1165] to-[#0847AD] text-transparent grid place-content-center py-4 max-w-[331px] rounded-[110px]">
           <p className="md:max-w-[280px] text-white">
             Copia de seguridad en la nube.
@@ -29,7 +29,7 @@ const OurServices = () => {
             la contabilidad.
           </p>
         </article>
-        #0847AD, #4C1165
+
         {/* <article className="bg-purple-black grid place-content-center px-3 py-4 md:p-0 h-52 md:h-auto">
           <p className="md:max-w-[280px]">
             Acceso a documentos originales en todo momento.
