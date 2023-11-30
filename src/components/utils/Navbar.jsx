@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-[#A63884]">
+    <div className="bg-[#ffffff]">
       <nav className="container mx-auto flex flex-col md:flex-row justify-between items-center p-8">
         <div className="flex justify-between w-full">
           <img src="/image/K-Logo.svg" alt="Logo" className="w-[100px]" />
@@ -24,26 +24,28 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div
-          className={`transition duration-500 ease-in-out transform flex w-full justify-end items-center  flex-col gap-y-3  ${
+
+        {/* className={`transition duration-500 ease-in-out transform flex w-full justify-between items-center  flex-col   ${
             isOpen ? "block" : "hidden"
-          } md:block`}
-        >
+            } md:block`} */}
+    
+        <div className="flex flex-col md:flex-row justify-between items-center w-full md:w-auto">
+
           <a
             href="#home"
-            className="text-white text-[16px] font-semibold w-max"
+            className="text-pink-gray text-[16px] font-semibold w-max"
           >
             ¿Por qué elegirnos?
           </a>
           <a
             href="#contact"
-            className="text-white text-[16px] font-semibold w-max"
+            className="text-pink-gray text-[16px] font-semibold w-max"
           >
             Nuestros Servicios
           </a>
           <button
             href="#about"
-            className="text-white bg-orange-ligth rounded-lg text-[16px] font-semibold w-full max-w-[186px] py-2"
+            className="text-white bg-blue-dark rounded-lg text-[16px] font-semibold w-full max-w-[186px] py-2"
           >
             Presupuesto
           </button>

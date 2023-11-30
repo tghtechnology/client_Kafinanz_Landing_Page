@@ -18,6 +18,7 @@ export default {
         'yellow-dark':'#FFA401',
         'indigo-black': '#37298C',
         'purple-black': '#5C0742',
+        
       },
       screens: {
         '1xl': '1440px',
