@@ -76,7 +76,7 @@ const Contact = () => {
         <p>Una solución contable adaptada a tu empresa.</p>
       </div>
 
-      <section className="flex w-full justify-center mx-auto flex-col md:flex-row gap-4 mb-4">
+      <div className="flex w-full justify-center mx-auto flex-col md:flex-row gap-4 mb-4">
         <div className="flex justify-center md:col-span-1 mb-4 ">
           <img src="/image/contact1.png" alt="Image contact" />
         </div>
@@ -149,7 +149,7 @@ const Contact = () => {
             />
           </div>
         </form>
-      </section>
+      </div>
     </>
   );
 };
