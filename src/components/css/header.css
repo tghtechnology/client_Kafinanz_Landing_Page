@@ -10,7 +10,7 @@ section .wave{
     height: 100px;
     background: url('/image/wave.png');
     background-size: 1000px 100px;
-    animation: animate 2s linear infinite;
+    animation: animate 9s linear infinite;
 }
 
 @keyframes animate {

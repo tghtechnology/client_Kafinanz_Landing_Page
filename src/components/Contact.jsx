@@ -4,6 +4,15 @@ import { toast } from "react-toastify";
 import { depart } from "../data/depart";
 
 const Contact = () => {
+  
+  const handleDepartmentChange = (e) => {
+    const selectedDepartment = e.target.value;
+    setValues((prevValues) => ({
+      ...prevValues,
+      department: selectedDepartment,
+    }));
+  };
+
   const confServices = {
     service: import.meta.env.VITE_SERVICE_CODE,
     template: import.meta.env.VITE_YOUR_TEMPLATE_ID,
@@ -13,12 +22,20 @@ const Contact = () => {
   const [values, setValues] = useState({
     fullname: "",
     email: "",
-    company: "",
     phone: "",
+    department:"",
     message: "",
   });
 
   const getAllValues = (e) => {
+
+    const { name, value } = e.target;
+
+    if (name === "phone" && !/^[0-9]*$/.test(value)) {
+      toast("Por favor, ingrese solo números en el campo de teléfono", { type: "error" });
+      return;
+    }
+
     setValues({
       ...values,
       [e.target.name]: e.target.value,
@@ -27,7 +44,7 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    console.log(values)
     if (Object.values(values).includes("")) {
       toast("Complete todos los campos", { type: "error" });
       return;
@@ -48,7 +65,7 @@ const Contact = () => {
           setValues({
             fullname: "",
             email: "",
-            company: "",
+            department: "",
             phone: "",
             message: "",
           });
@@ -58,7 +75,7 @@ const Contact = () => {
           setValues({
             fullname: "",
             email: "",
-            company: "",
+            department: "",
             phone: "",
             message: "",
           });
@@ -66,6 +83,8 @@ const Contact = () => {
       );
   };
   const form = useRef();
+
+  
 
   return (
     <>
@@ -111,16 +130,21 @@ const Contact = () => {
             <input
               className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
               type="text"
-              id="company"
-              value={values.company}
-              name="company"
+              id="phone"
+              value={values.phone}
+              name="phone"
               onChange={getAllValues}
               placeholder="Telefono"
             />
           </div>
           <div className="">
             {/* Seleccionar Departamento */}
-            <select className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none bg-white">
+            <select 
+              className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none bg-white"
+              onChange={handleDepartmentChange}
+              value={values.department}
+              
+              >
               <option value="" >
                 Departamentos
               </option>
