@@ -2,8 +2,10 @@
 const Footer = () => {
   return (
     <>
-      <footer className="w-1xl h-40 bg-indigo-black">
-        <p className="text-center pt-20  md:pt-28 text-white font-poppins text-xl">Derechos reservados Contabilidad digital Kafinanz @2023</p>
+      <footer className="flex justify-center items-center w-1xl h-40 bg-clip-bg bg-gradient-to-b from-[#0847AD] to-[#CC0E34] text-transparent">
+        <p className="text-center text-white font-poppins text-xl">
+          Derechos reservados Contabilidad digital Kafinanz @2023
+        </p>
       </footer>
     </>
   );

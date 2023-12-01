@@ -1,6 +1,6 @@
 const Info = () => {
   return (
-    <section className="lg:h-[790px] relative bg-[url('image/fondo-info.png')] bg-no-repeat bg-cover p-3">
+    <section className="lg:h-[790px] relative bg-[url('image/info.png')] bg-no-repeat bg-cover p-3">
       <article className="flex flex-col md:flex-row md:justify-around md:items-center md:h-full gap-3 text-gray-100 relative 3xl:max-w-7xl 3xl:mx-auto">
           <div className="bg-black bg-opacity-30 w-8/12 rounded-md my-auto h-3/5 left-0 top-0 bottom-0 absolute hidden z-0 lg:block" ></div>
         <div className="bg-black bg-opacity-40 lg:bg-transparent rounded-md p-3 z-10">
@@ -20,9 +20,9 @@ const Info = () => {
             </li>
           </ul>
         </div>
-        <div className="z-10">
+        {/* <div className="z-10">
           <img src="/image/Group-47.png" alt="" />
-        </div>
+        </div> */}
       </article>
     </section>
   );

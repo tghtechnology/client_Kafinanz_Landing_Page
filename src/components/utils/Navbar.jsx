@@ -25,10 +25,23 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <nav className={`flex flex-col md:flex-row md:gap-4 md:translate-x-0 md:h-auto items-center gap-2 relative md:static transition-all ${isOpen? 'translate-x-0':'-translate-x-96 h-0'}`}>
-          <a href="#">¿Porque elegirnos?</a>
-          <a href="#">Nuestro Servicio</a>
-          <a className="bg-blue-dark rounded-lg py-2 px-3 text-white font-semibold" href="#">Presupuesto</a>
+        <nav
+          className={`flex flex-col md:flex-row md:gap-4 md:translate-x-0 md:h-auto items-center gap-2 relative md:static transition-all ${
+            isOpen ? "translate-x-0" : "-translate-x-[800px] h-0"
+          }`}
+        >
+          <a href="#" className="text-base font-semibold text-purple-black">
+            ¿Porque elegirnos?
+          </a>
+          <a href="#" className="text-base font-semibold text-purple-black">
+            Nuestro Servicio
+          </a>
+          <a
+            className="bg-blue-dark rounded-lg py-2 px-3 text-white font-semibold"
+            href="#"
+          >
+            Presupuesto
+          </a>
         </nav>
       </div>
     </div>
