@@ -4,14 +4,13 @@ import { toast } from "react-toastify";
 import { depart } from "../data/depart";
 
 const Contact = () => {
-  
-  const handleDepartmentChange = (e) => {
-    const selectedDepartment = e.target.value;
-    setValues((prevValues) => ({
-      ...prevValues,
-      department: selectedDepartment,
-    }));
-  };
+  // const handleDepartmentChange = (e) => {
+  //   const selectedDepartment = e.target.value;
+  //   setValues((prevValues) => ({
+  //     ...prevValues,
+  //     department: selectedDepartment,
+  //   }));
+  // };
 
   const confServices = {
     service: import.meta.env.VITE_SERVICE_CODE,
@@ -23,32 +22,48 @@ const Contact = () => {
     fullname: "",
     email: "",
     phone: "",
-    department:"",
+    department: "",
     message: "",
   });
 
-  const getAllValues = (e) => {
+  const [error, setError] = useState(false);
 
+  const getAllValues = (e) => {
     const { name, value } = e.target;
 
     if (name === "phone" && !/^[0-9]*$/.test(value)) {
-      toast("Por favor, ingrese solo números en el campo de teléfono", { type: "error" });
+      toast("Por favor, ingrese solo números en el campo de teléfono", {
+        type: "error",
+      });
       return;
     }
 
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value,
-    });
+    if (name === "department") {
+      setValues((prevValues) => ({
+        ...prevValues,
+        [name]: value,
+      }));
+    } else {
+      setValues({
+        ...values,
+        [name]: value,
+      });
+    }
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log(values)
+    console.log(values);
+
     if (Object.values(values).includes("")) {
       toast("Complete todos los campos", { type: "error" });
+      setError(true);
       return;
     }
+
+    setError(false);
+
+    console.log(form.current);
 
     emailjs
       .sendForm(
@@ -82,9 +97,8 @@ const Contact = () => {
         }
       );
   };
-  const form = useRef();
 
-  
+  const form = useRef();
 
   return (
     <>
@@ -95,10 +109,20 @@ const Contact = () => {
         <p>Una solución contable adaptada a tu empresa.</p>
       </div>
 
+      {/* Mensagge of Error */}
+      <div className="container flex justify-end py-5">
+        {error && (
+          <p className="p-4 text-white bg-red-800 font-bold rounded-lg">
+            Por favor, complete todos los campos
+          </p>
+        )}
+      </div>
+
       <div className="flex w-full justify-center mx-auto flex-col md:flex-row gap-4 mb-4">
         <div className="flex justify-center md:col-span-1 mb-4 ">
           <img src="/image/contact1.png" alt="Image contact" />
         </div>
+
         <form
           ref={form}
           onSubmit={sendEmail}
@@ -110,7 +134,6 @@ const Contact = () => {
               type="text"
               value={values.fullname}
               name="fullname"
-              id="fullname"
               onChange={getAllValues}
               placeholder="Nombre Completo"
             />
@@ -119,7 +142,6 @@ const Contact = () => {
             <input
               className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
               type="email"
-              id="email"
               value={values.email}
               name="email"
               onChange={getAllValues}
@@ -139,15 +161,13 @@ const Contact = () => {
           </div>
           <div className="">
             {/* Seleccionar Departamento */}
-            <select 
+            <select
               className="block w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none bg-white"
-              onChange={handleDepartmentChange}
-              value={values.department}
-              
-              >
-              <option value="" >
-                Departamentos
-              </option>
+              onChange={getAllValues}
+              value={values.department} // Asegúrate de que el valor del departamento esté configurado correctamente
+              name="department"
+            >
+              <option value="department">Departamentos</option>
               {depart.map((depart) => (
                 <option key={depart.id} value={depart.nombre}>
                   {depart.nombre}
@@ -156,9 +176,8 @@ const Contact = () => {
             </select>
           </div>
           <div className="h-[247px] md:col-span-2">
-            <textarea 
+            <textarea
               className="block h-full w-full p-2 border-b-2 border-r-2 border-[#9621B8] outline-none"
-              id="message"
               name="message"
               value={values.message}
               onChange={getAllValues}
