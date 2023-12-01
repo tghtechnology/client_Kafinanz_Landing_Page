@@ -1,6 +1,6 @@
 const Advantages = () => {
   return (
-    <div className="md:h-[468px] relative flex flex-col justify-center items-center gap-2 md:gap-10 p-2 my-3 md:my-0 3xl:max-w-7xl mx-auto">
+    <div className="md:h-[456px] relative flex flex-col justify-center items-center gap-2 md:gap-10 p-2 my-3 md:my-0 3xl:max-w-7xl mx-auto">
       <h3 className="font-bold text-4xl text-center  bg-clip-text bg-gradient-to-b from-[#0847AD] to-[#4C1165] text-transparent z-10 uppercase">
         Servicio contable en línea
       </h3>
