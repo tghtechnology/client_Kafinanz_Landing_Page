@@ -1,0 +1,24 @@
+section{
+    background: linear-gradient(180deg, rgba(94,12,95,1) 0%, rgba(159,6,72,1) 74%, rgba(203,14,53,1) 100%);
+}
+
+section .wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('/image/wave.png');
+    background-size: 1000px 100px;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+    
+}
