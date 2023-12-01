@@ -1,3 +1,6 @@
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import AccoutingService from "../components/AccoutingService";
 import Advantages from "../components/Advantages";
 import ChooseUs from "../components/ChooseUs";
@@ -11,23 +14,24 @@ import Footer from "../components/utils/Footer";
 import Navbar from "../components/utils/Navbar";
 
 const Home = () => {
-    return(
-        <>
-        <Navbar/>
-        <Header/>
-        <main>
-            <ChooseUs/>
-            <AccoutingService/>
-            <Planes/>
-            {/* <ServiceDetails/> */}
-            <Advantages/>
-            <OurServices/>
-            <Info/>
-            <Contact/>
-        </main>
-        <Footer/>
-        </>
-    )
-}
+  return (
+    <>
+      <Navbar />
+      <Header />
+      <main>
+        <ChooseUs />
+        <AccoutingService />
+        <Planes />
+        {/* <ServiceDetails/> */}
+        <Advantages />
+        <OurServices />
+        <Info />
+        <Contact />
+      </main>
+      <Footer />
+      <ToastContainer />
+    </>
+  );
+};
 
 export default Home;
