@@ -23,6 +23,10 @@ export default {
       screens: {
         '1xl': '1440px',
         '3xl': '2100px'
+      },
+      gridTemplateColumns: {
+        'services-movil': 'repeat(2, minmax(0, 160px))',
+        'services-desktop': 'repeat(4, minmax(0, 330px))'
       }
     }
   },
