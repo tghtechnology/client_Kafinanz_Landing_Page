@@ -21,6 +21,7 @@ export default {
         
       },
       screens: {
+        'cel': '444px',
         '1xl': '1440px',
         '3xl': '2100px'
       }
