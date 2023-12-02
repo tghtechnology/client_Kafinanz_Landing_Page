@@ -23,6 +23,22 @@ section .wave{
     
 }
 
+
+/* WhatSapp */
+@keyframes scaleIn {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 /* Otro */
 /* articule{
     background: linear-gradient(180deg, rgb(255, 254, 254) 0%, #f8f8f8 74%);

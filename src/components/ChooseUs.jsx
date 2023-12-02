@@ -28,6 +28,9 @@ const ChooseUs = () => {
           periódica de la información financiera y así la gerencia pueda tomar
           decisiones oportunamente.
         </p>
+        <button className="animate-ping transition-transform transform scale-100 hover:scale-90 ">
+          ❤️
+        </button>
       </div>
 
       {/* <div className="wave wabe1 absolute bottom-0"></div> */}
