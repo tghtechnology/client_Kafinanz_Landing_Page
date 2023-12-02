@@ -14,19 +14,23 @@ const Whatsapp = () => {
   return (
     <>
       <button
-        className="fixed bg-green-500 text-white p-4 rounded-full shadow-lg transition-transform transform hover:scale-110 animate-bounce animate-duration-2000 animate-iteration-3 animate__animated animate__infinite"
+        className="fixed  transition-transform transform hover:scale-110 animate-bounce animate-duration-2000 animate-iteration-3 animate__animated animate__infinite"
         style={{ bottom: "4rem", right: "2rem", animationName: "scaleIn" }}
         onClick={handleWhatsAppClick}
         onMouseEnter={() => setShowMessage(true)}
         onMouseLeave={() => setShowMessage(false)}
       >
-        <img src="/image/wt.svg" alt="" className="text-5xl max-w-[50px] text-green-500" />
+        <img
+          src="/image/whatsapp.png"
+          alt=""
+          className="text-5xl max-w-[70px] text-green-500"
+        />
       </button>
 
       {showMessage && (
         <div
-          className="fixed bg-green-500 py-3 px-8 text-white font-semibold rounded-full text-2xl shadow-lg "
-          style={{ bottom: "5rem", right: "8rem" }}
+          className="fixed bg-[#2c9c35] py-3 px-9 text-white font-semibold rounded-bl-full rounded-tr-full text-2xl shadow-lg "
+          style={{ bottom: "4rem", right: "8rem" }}
         >
           Chatea con nosotros
         </div>
