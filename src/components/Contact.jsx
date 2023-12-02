@@ -102,11 +102,13 @@ const Contact = () => {
 
   return (
     <>
-      <div className="text-center m-10">
-        <h2 className="underline text-[#9621B8] font-bold my-3">
-          CONTÁCTATE CON NOSOTROS
-        </h2>
-        <p>Una solución contable adaptada a tu empresa.</p>
+      <div className="text-center grid grid-cols-12 m-10">
+        <div className="col-span-6 col-start-1 col-end-12  md:col-start-6 md:col-end-11">
+          <h2 className=" underline text-purple-black font-bold my-3 text-2xl uppercase">
+            Contáctate con nosotros
+          </h2>
+          <p>Una solución contable adaptada a tu empresa.</p>
+        </div>
       </div>
 
       {/* Mensagge of Error */}
@@ -120,13 +122,17 @@ const Contact = () => {
 
       <div className="flex w-full justify-center mx-auto flex-col md:flex-row gap-4 mb-4">
         <div className="flex justify-center md:col-span-1 mb-4 ">
-          <img src="/image/contact1.png" alt="Image contact" />
+          <img
+            src="/image/contact.svg"
+            alt="Image contact"
+            className="hidden md:block"
+          />
         </div>
 
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="w-full max-w-[780px] grid gap-4 md:grid-cols-2"
+          className="w-full max-w-[780px] grid gap-4 md:grid-cols-2 p-4 md:p-8 bg-white rounded-lg shadow-2xl"
         >
           <div className="">
             <input
