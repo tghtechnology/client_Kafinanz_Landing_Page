@@ -52,14 +52,7 @@ const Navbar = () => {
           >
             Nuestro Servicio
           </a>
-          {/* {
-            <a
-              className="bg-blue-dark rounded-lg py-2 px-3 text-white font-semibold"
-              href="#contact"
-            >
-              Presupuesto
-            </a>
-          } */}
+
         </nav>
       </div>
     </div>
