@@ -3,9 +3,10 @@ const OurServices = () => {
   return (
     <div id="services" className="mb-6">
       <div className="max-w-7xl mx-auto my-5 px-2">
-        <h3 className="text-4xl text-purple-black font-bold text-center sm:text-start sm:w-max border-b-8 border-purple-black">
+        <h3 className="text-4xl bg-clip-text bg-gradient-to-b from-[#4F0F64] via-[#8E077D] to-[#FFA401] text-transparent font-bold text-center sm:text-start sm:w-max">
           Ventajas de nuestros servicios
         </h3>
+
       </div>
       <div className="grid grid-cols-services-movil md:grid-cols-services-desktop place-content-center gap-4 font-semibold md:font-bold text-sm md:text-2xl leading-4">
         <article className="h-40 md:h-[336px] rounded-full md:rounded-[80px] p-2 flex flex-col justify-center text-center bg-gradient-to-b from-[#4C1165] to-[#0847AD]">
