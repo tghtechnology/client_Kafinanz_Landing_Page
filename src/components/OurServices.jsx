@@ -1,7 +1,7 @@
 
 const OurServices = () => {
   return (
-    <div className="mb-6">
+    <div id="services" className="mb-6">
       <div className="max-w-7xl mx-auto my-5 px-2">
         <h3 className="text-4xl text-purple-black font-bold text-center sm:text-start sm:w-max border-b-8 border-purple-black">
           Ventajas de nuestros servicios
