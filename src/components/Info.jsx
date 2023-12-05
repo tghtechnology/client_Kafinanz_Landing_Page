@@ -1,13 +1,12 @@
 const Info = () => {
   return (
-    <section className="lg:h-[790px] relative bg-[url('image/info.png')] bg-no-repeat bg-cover p-3">
-      <article className="flex flex-col md:flex-row md:justify-around md:items-center md:h-full gap-3 text-gray-100 relative 3xl:max-w-7xl 3xl:mx-auto">
-          <div className="bg-black bg-opacity-30 w-8/12 rounded-md my-auto h-3/5 left-0 top-0 bottom-0 absolute hidden z-0 lg:block" ></div>
-        <div className="bg-black bg-opacity-40 lg:bg-transparent rounded-md p-3 z-10">
-          <h4 className="font-bold text-white text-center border-b-2 border-white py-2 px-1 md:my-5">RECOPILACIÓN Y ENTREGA DE INFORMACIÓN</h4>
-          <ul className="space-y-3">
+    <section className="lg:h-[704px] relative bg-[url('image/info.png')] bg-no-repeat bg-cover bg-right py-8 md:py-3 px-4 md:pl-7">
+      <div className="bg-gradient-to-r z-0 from-purple-950 to-red-900 absolute top-0 left-0 bottom-0 right-0 opacity-60"></div>
+      <article className="z-10 relative 3xl:max-w-7xl 3xl:mx-auto">
+          <h4 className="font-bold my-8 md:py-14 text-white text-xl md:text-2xl max-w-md md:max-w-max before:content-[''] after:block after:bg-white after:h-1 after:rounded-md">RECOPILACIÓN Y ENTREGA DE INFORMACIÓN</h4>
+          <ul className="space-y-4 text-white text-lg md:text-2xl list-disc ml-4 md:ml-8 mb-24 md:mb-0 max-w-[208px] md:max-w-xl md:space-y-8">
             <li>
-              <h5 className="font-semibold text-white">Contable:</h5>
+              <h5 className="font-semibold ">Contable:</h5>
               <p>Recopilación digital, visitas, y comunicación constante.</p>
             </li>
             <li>
@@ -19,11 +18,7 @@ const Info = () => {
               <p>Cálculo y cierre mensual de planilla.</p>
             </li>
           </ul>
-        </div>
-        {/* <div className="z-10">
-          <img src="/image/Group-47.png" alt="" />
-        </div> */}
-      </article>
+        </article>
     </section>
   );
 };
