@@ -2,6 +2,18 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  
+  const scrollToSection = (id) => {
+    const target = document.getElementById(id);
+    if (target) {
+      const offset = 100; // Ajusta este valor según tu preferencia de desplazamiento adicional
+      const targetOffset = target.offsetTop - offset;
+      window.scrollTo({
+        top: targetOffset,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
     <div className="sticky top-0 bg-white z-50">
@@ -33,15 +45,20 @@ const Navbar = () => {
           <a href="#" className="text-base font-semibold text-purple-black">
             ¿Porque elegirnos?
           </a>
-          <a href="#" className="text-base font-semibold text-purple-black">
+          <a onClick={()=> scrollToSection('services')} href="#" className="text-base font-semibold text-purple-black">
             Nuestro Servicio
           </a>
-          <a
+          {
+            /**
+             * <a
             className="bg-blue-dark rounded-lg py-2 px-3 text-white font-semibold"
-            href="#"
+            href="#contact"
           >
             Presupuesto
           </a>
+             * 
+             */
+          }
         </nav>
       </div>
     </div>

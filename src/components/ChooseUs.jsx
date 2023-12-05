@@ -3,7 +3,7 @@ import "./css/header.css";
 
 const ChooseUs = () => {
   return (
-    <articule className="h-auto p-4 md:h-[452px] grid place-content-center relative 3xl:max-w-7xl 3xl:mx-auto">
+    <article className="h-auto p-4 md:h-[452px] grid place-content-center relative 3xl:max-w-7xl 3xl:mx-auto">
       <div className="container mx-auto px-2 py-6 text-center ">
         <img
           src="/image/icons-left.svg"
@@ -31,7 +31,7 @@ const ChooseUs = () => {
       </div>
 
       {/* <div className="wave wabe1 absolute bottom-0"></div> */}
-    </articule>
+    </article>
   );
 };
 
