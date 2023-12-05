@@ -1,6 +1,5 @@
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import React from "react";
 
 import AccoutingService from "../components/AccoutingService";
 import Advantages from "../components/Advantages";
@@ -24,7 +23,6 @@ const Home = () => {
         <ChooseUs />
         <AccoutingService />
         <Planes />
-        {/* <ServiceDetails/> */}
         <Advantages />
         <OurServices />
         <Info />

@@ -21,15 +21,16 @@ const Whatsapp = () => {
         onMouseLeave={() => setShowMessage(false)}
       >
         <img
-          src="/image/whatsapp.png"
+          src="/image/whatsapp.svg"
+          // src="/image/whatsapp.png"
           alt=""
-          className="text-5xl max-w-[70px] text-green-500"
+          className="text-5xl max-w-[70px] text-green-500 bg-green-500 rounded-full p-3"
         />
       </button>
 
       {showMessage && (
         <div
-          className="fixed bg-[#2c9c35] py-3 px-9 text-white font-semibold rounded-bl-full rounded-tr-full text-2xl shadow-lg "
+          className="fixed bg-green-500 py-3 px-9 text-white font-semibold rounded-bl-full rounded-tr-full text-2xl shadow-lg "
           style={{ bottom: "4rem", right: "8rem" }}
         >
           Chatea con nosotros

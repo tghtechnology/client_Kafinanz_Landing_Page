@@ -1,6 +1,5 @@
 import "./css/header.css";
 
-
 const ChooseUs = () => {
   return (
     <article className="h-auto p-4 md:h-[452px] grid place-content-center relative 3xl:max-w-7xl 3xl:mx-auto">
@@ -28,12 +27,8 @@ const ChooseUs = () => {
           periódica de la información financiera y así la gerencia pueda tomar
           decisiones oportunamente.
         </p>
-        <button className="animate-ping transition-transform transform scale-100 hover:scale-90 ">
-          ❤️
-        </button>
       </div>
 
-      {/* <div className="wave wabe1 absolute bottom-0"></div> */}
     </article>
   );
 };

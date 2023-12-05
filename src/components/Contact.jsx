@@ -4,13 +4,6 @@ import { toast } from "react-toastify";
 import { depart } from "../data/depart";
 
 const Contact = () => {
-  // const handleDepartmentChange = (e) => {
-  //   const selectedDepartment = e.target.value;
-  //   setValues((prevValues) => ({
-  //     ...prevValues,
-  //     department: selectedDepartment,
-  //   }));
-  // };
 
   const confServices = {
     service: import.meta.env.VITE_SERVICE_CODE,
