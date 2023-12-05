@@ -3,15 +3,13 @@ const OurServices = () => {
   return (
     <div className="mb-6">
       <div className="max-w-7xl mx-auto my-5 px-2">
-        <h3 className="text-2xl text-pink-gray font-semibold text-center sm:text-start sm:w-max border-b-4 border-pink-gray">
+        <h3 className="text-4xl text-purple-black font-bold text-center sm:text-start sm:w-max border-b-8 border-purple-black">
           Ventajas de nuestros servicios
         </h3>
       </div>
       <div className="grid grid-cols-services-movil md:grid-cols-services-desktop place-content-center gap-4 font-semibold md:font-bold text-sm md:text-2xl leading-4">
         <article className="h-40 md:h-[336px] rounded-full md:rounded-[80px] p-2 flex flex-col justify-center text-center bg-gradient-to-b from-[#4C1165] to-[#0847AD]">
-          <p className="text-white">
-            Copia de seguridad en la nube.
-          </p>
+          <p className="text-white">Copia de seguridad en la nube.</p>
         </article>
         <article className="h-40 md:h-[336px] rounded-full md:rounded-[80px] p-2 flex flex-col justify-center text-center bg-gradient-to-b from-[#4C1165] to-[#CC0E34]">
           <p className="text-white">
