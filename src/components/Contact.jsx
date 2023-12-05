@@ -4,13 +4,6 @@ import { toast } from "react-toastify";
 import { depart } from "../data/depart";
 
 const Contact = () => {
-  // const handleDepartmentChange = (e) => {
-  //   const selectedDepartment = e.target.value;
-  //   setValues((prevValues) => ({
-  //     ...prevValues,
-  //     department: selectedDepartment,
-  //   }));
-  // };
 
   const confServices = {
     service: import.meta.env.VITE_SERVICE_CODE,
@@ -102,7 +95,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="text-center grid grid-cols-12 m-10">
+      <div id="contact" className="text-center grid grid-cols-12 m-10">
         <div className="col-span-6 col-start-1 col-end-12  md:col-start-6 md:col-end-11">
           <h2 className=" underline text-purple-black font-bold my-3 text-2xl uppercase">
             Contáctate con nosotros

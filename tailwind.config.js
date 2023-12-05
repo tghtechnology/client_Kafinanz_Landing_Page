@@ -27,7 +27,8 @@ export default {
       },
       gridTemplateColumns: {
         'services-movil': 'repeat(2, minmax(0, 160px))',
-        'services-desktop': 'repeat(4, minmax(0, 330px))'
+        'services-desktop': 'repeat(4, minmax(0, 330px))',
+        'planes-desktop': 'repeat(2, minmax(0, 646px))'
       }
     }
   },

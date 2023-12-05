@@ -9,11 +9,12 @@ import Header from "../components/Header";
 import Info from "../components/Info";
 import OurServices from "../components/OurServices";
 import Planes from "../components/Planes";
-// import ServiceDetails from "../components/ServiceDetails";
 import Footer from "../components/utils/Footer";
 import Navbar from "../components/utils/Navbar";
+import Whatsapp from "../components/utils/Whatsapp";
 
 const Home = () => {
+
   return (
     <>
       <Navbar />
@@ -22,7 +23,6 @@ const Home = () => {
         <ChooseUs />
         <AccoutingService />
         <Planes />
-        {/* <ServiceDetails/> */}
         <Advantages />
         <OurServices />
         <Info />
@@ -30,6 +30,9 @@ const Home = () => {
       </main>
       <Footer />
       <ToastContainer />
+
+      <Whatsapp/>
+
     </>
   );
 };
