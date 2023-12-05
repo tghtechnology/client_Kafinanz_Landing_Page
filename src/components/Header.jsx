@@ -24,8 +24,12 @@ const Header = () => {
                 Transformamos su visión financiera:
               </p>
               <h1 className="text-white font-normal px-1 mt-5 lg:text-start">
-                Somos una compañía experta en Contabilidad Digital, le
-                brindaremos un mañana más rentable.
+                Somos{" "}
+                <span className="text-yellow-dark  font-extrabold text-3xl">
+                  Kafinanz
+                </span>{" "}
+                , una compañía experta en Contabilidad Digital, le brindaremos un
+                mañana más rentable.
               </h1>
               <p className="text-white text-center text-[1.2rem] mt-6 px-1 lg:text-start">
                 Descubra soluciones innovadoras, eficiencia operativa y
