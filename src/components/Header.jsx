@@ -21,7 +21,7 @@ const Header = () => {
           </div>
 
           {/* BOTÓN DE CONTACTO */}
-          <div className="container flex justify-center items-center mt-32 md:mt-18 ml-7 lg:justify-start">
+          <div className="container flex justify-center items-center mt-40 ml:0 md:mt-32 md:ml-7  lg:justify-start">
             <a
               href="#"
               className="text-white bg-blue-dark text-lg font-extrabold px-8 py-4 rounded-[30px] uppercase"

@@ -38,7 +38,7 @@ const Navbar = () => {
           </a>
           <a
             className="bg-blue-dark rounded-lg py-2 px-3 text-white font-semibold"
-            href="#"
+            href="hola"
           >
             Presupuesto
           </a>
