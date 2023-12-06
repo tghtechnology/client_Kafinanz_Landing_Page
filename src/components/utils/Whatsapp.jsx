@@ -20,7 +20,7 @@ const Whatsapp = () => {
         onMouseLeave={() => setShowMessage(false)}
         aria-label="whatsapp"
       >
-        <img className="max-w-[40px] md:max-w-[60px] text-green-500 bg-green-500 rounded-full p-3"
+        <img className="max-w-[60px] md:max-w-[60px] text-green-500 bg-green-500 rounded-full p-3"
           src="/image/whatsapp.svg"
           alt="logo whatsapp"
         />
