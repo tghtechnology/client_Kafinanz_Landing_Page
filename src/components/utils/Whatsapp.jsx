@@ -7,7 +7,7 @@ const Whatsapp = () => {
     const mensajePredeterminado = encodeURIComponent(
       "Hola, Necesito tu servicio de consultoría digital 📱📡📊"
     );
-    const url = `https://api.whatsapp.com/send?phone=952482488&text=${mensajePredeterminado}`;
+    const url = `https://api.whatsapp.com/send?phone=987735564&text=${mensajePredeterminado}`;
     window.open(url, "_blank");
   };
 

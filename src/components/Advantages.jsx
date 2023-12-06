@@ -1,7 +1,7 @@
 const Advantages = () => {
   return (
     <div className="md:h-[456px] relative flex flex-col justify-center items-center gap-2 md:gap-10 p-2 my-3 md:my-0 3xl:max-w-7xl mx-auto">
-      <h3 className="font-bold text-4xl text-center  bg-clip-text bg-gradient-to-b from-[#0847AD] to-[#4C1165] text-transparent z-10 uppercase">
+      <h3 className="font-bold text-4xl text-center  bg-clip-text bg-gradient-to-b from-[#0847AD] to-[#4C1165] text-transparent z-10 uppercase my-10">
         Servicio contable en línea
       </h3>
 
@@ -12,9 +12,10 @@ const Advantages = () => {
         financiera de tu empresa
       </p>
       <img
-        className="max-w-[252px] md:absolute md:-bottom-10 lg:-bottom-3 xl:bottom-0 md:right-0"
+        className="max-w-[252px] md:absolute md:-bottom-10 lg:-bottom-3 xl:bottom-0 md:right-0 hidden md:block"
         src="/image/icons-left.svg"
         alt="iconos"
+
       />
     </div>
   );
