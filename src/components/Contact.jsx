@@ -3,28 +3,29 @@ import { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { depart } from "../data/depart";
 
+const confServices = {
+  service: import.meta.env.VITE_SERVICE_CODE,
+  template: import.meta.env.VITE_YOUR_TEMPLATE_ID,
+  key: import.meta.env.VITE_YOUR_PUBLIC_KEY,
+};
+
+const initialState = {
+  fullname: "",
+  email: "",
+  phone: "",
+  department: "",
+  message: "",
+};
+
 const Contact = () => {
-
-  const confServices = {
-    service: import.meta.env.VITE_SERVICE_CODE,
-    template: import.meta.env.VITE_YOUR_TEMPLATE_ID,
-    key: import.meta.env.VITE_YOUR_PUBLIC_KEY,
-  };
-
-  const [values, setValues] = useState({
-    fullname: "",
-    email: "",
-    phone: "",
-    department: "",
-    message: "",
-  });
-
-  const [error, setError] = useState(false);
+  const [values, setValues] = useState(initialState);
+  const form = useRef();
 
   const getAllValues = (e) => {
     const { name, value } = e.target;
+    const regPhone = new RegExp(!/^[0-9]*$/);
 
-    if (name === "phone" && !/^[0-9]*$/.test(value)) {
+    if (name === "phone" && regPhone.test(value)) {
       toast("Por favor, ingrese solo números en el campo de teléfono", {
         type: "error",
       });
@@ -50,13 +51,8 @@ const Contact = () => {
 
     if (Object.values(values).includes("")) {
       toast("Complete todos los campos", { type: "error" });
-      setError(true);
       return;
     }
-
-    setError(false);
-
-    console.log(form.current);
 
     emailjs
       .sendForm(
@@ -70,28 +66,14 @@ const Contact = () => {
           toast("Mensaje enviado con exito " + result.text, {
             type: "success",
           });
-          setValues({
-            fullname: "",
-            email: "",
-            department: "",
-            phone: "",
-            message: "",
-          });
+          setValues(initialState);
         },
         (error) => {
           toast(error.text, { type: "error" });
-          setValues({
-            fullname: "",
-            email: "",
-            department: "",
-            phone: "",
-            message: "",
-          });
+          setValues(initialState);
         }
       );
   };
-
-  const form = useRef();
 
   return (
     <>
@@ -102,15 +84,6 @@ const Contact = () => {
           </h2>
           <p>Una solución contable adaptada a tu empresa.</p>
         </div>
-      </div>
-
-      {/* Mensagge of Error */}
-      <div className="container flex justify-end py-5">
-        {error && (
-          <p className="p-4 text-white bg-red-800 font-bold rounded-lg">
-            Por favor, complete todos los campos
-          </p>
-        )}
       </div>
 
       <div className="flex w-full justify-center mx-auto flex-col md:flex-row gap-4 mb-4">
@@ -135,6 +108,7 @@ const Contact = () => {
               name="fullname"
               onChange={getAllValues}
               placeholder="Nombre Completo"
+              aria-label="Nombre"
             />
           </div>
           <div className="">
@@ -145,6 +119,7 @@ const Contact = () => {
               name="email"
               onChange={getAllValues}
               placeholder="Correo"
+              aria-label="Correo"
             />
           </div>
           <div className="">
@@ -156,6 +131,7 @@ const Contact = () => {
               name="phone"
               onChange={getAllValues}
               placeholder="Telefono"
+              aria-label="Telefono"
             />
           </div>
           <div className="">
@@ -165,6 +141,7 @@ const Contact = () => {
               onChange={getAllValues}
               value={values.department} // Asegúrate de que el valor del departamento esté configurado correctamente
               name="department"
+              aria-label="Departamento"
             >
               <option value="department">Departamentos</option>
               {depart.map((depart) => (
@@ -181,6 +158,7 @@ const Contact = () => {
               value={values.message}
               onChange={getAllValues}
               placeholder="Descripcion del Mensaje"
+              aria-label="Descripcion"
             />
           </div>
 

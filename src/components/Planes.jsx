@@ -6,7 +6,7 @@ const Planes = () => {
           ¿Ya conocias nuestros planes?
         </h1>
         <div className="relative grid gap-4 text-white md:grid-cols-planes-desktop place-content-center md:gap-14 px-5">
-          <div className="bg-[url('/image/plan-mensual.jpg')] bg-no-repeat bg-cover rounded-[70px] h-[334px] max-h-[334px] min-h-[220px] lg:h-[667px] lg:max-h-[600px] flex flex-col justify-end py-8 px-4 lg:px-5 gap-3 lg:py-20">
+          <div className="bg-[url('/image/plan-mensual.webp')] bg-no-repeat bg-cover rounded-[70px] h-[334px] max-h-[334px] min-h-[220px] lg:h-[667px] lg:max-h-[600px] flex flex-col justify-end py-8 px-4 lg:px-5 gap-3 lg:py-20">
             <h2 className="font-bold text-base lg:text-3xl  uppercase w-max after:content-[' '] after:block after:w-full after:h-1 after:bg-white after:rounded-md">
               Mensual
             </h2>
@@ -17,7 +17,7 @@ const Planes = () => {
               <li>Registro contable</li>
             </ul>
           </div>
-          <div className="bg-[url('/image/plan-anual.jpg')] bg-no-repeat bg-cover rounded-[70px] h-[334px] max-h-[334px] min-h-[220px] lg:h-[667px] lg:max-h-[600px] flex flex-col justify-end py-8 px-4 lg:px-5 gap-3 lg:py-20">
+          <div className="bg-[url('/image/plan-anual.webp')] bg-no-repeat bg-cover rounded-[70px] h-[334px] max-h-[334px] min-h-[220px] lg:h-[667px] lg:max-h-[600px] flex flex-col justify-end py-8 px-4 lg:px-5 gap-3 lg:py-20">
             <h2 className="font-bold text-base lg:text-3xl uppercase w-max after:content-[' '] after:block after:w-full after:h-1 after:bg-white after:rounded-md">
               Anual
             </h2>
@@ -29,7 +29,7 @@ const Planes = () => {
               </li>
             </ul>
           </div>
-          <div className="bg-[url('/image/plan-cotizacion.jpg')] bg-no-repeat bg-cover rounded-[70px] h-[334px] max-h-[334px] min-h-[220px] lg:h-[667px] lg:max-h-[600px] flex flex-col justify-end lg:pb-[108px]  py-8 px-4 lg:px-5 gap-3 lg:py-20">
+          <div className="bg-[url('/image/plan-cotizacion.webp')] bg-no-repeat bg-cover rounded-[70px] h-[434px] max-h-[434px] lg:h-[667px] lg:max-h-[600px] flex flex-col justify-end lg:pb-[108px]  py-8 px-4 lg:px-5 gap-3 lg:py-20">
             <h2 className="font-bold text-base lg:text-3xl uppercase after:content-[' '] after:block after:w-full after:h-1 after:bg-white after:rounded-md">
               Cotización de servicio contable
             </h2>
@@ -45,7 +45,7 @@ const Planes = () => {
               </li>
             </ul>
           </div>
-          <div className="bg-[url('/image/plan-auditoria.jpg')] bg-no-repeat bg-cover rounded-[70px] h-[334px] max-h-[334px] min-h-[220px] lg:h-[667px] lg:max-h-[600px] flex flex-col justify-end py-8 px-4 lg:px-5 gap-3 lg:py-20">
+          <div className="bg-[url('/image/plan-auditoria.webp')] bg-no-repeat bg-cover rounded-[70px] h-[534px] max-h-[494px] lg:h-[667px] lg:max-h-[600px] flex flex-col justify-end py-8 px-4 lg:px-5 gap-3 lg:py-20">
             <h2 className="text-lg lg:text-3xl font-black uppercase after:content-[' '] after:block after:w-full after:h-1 after:bg-white after:rounded-md">
               Auditoria Tributaria Preventiva
             </h2>

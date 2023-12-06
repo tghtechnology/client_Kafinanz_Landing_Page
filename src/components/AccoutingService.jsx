@@ -7,7 +7,7 @@ const AccoutingService = () => {
           <img
             className="hidden sm:block absolute left-0 -bottom-1 sm:-bottom-8 z-0 max-w-[100px] md:max-w-[150px lg:max-w-max"
             src="/image/contable-left.png"
-            alt=""
+            alt="iconos"
           />
           <div className="mt-12 max-w-3xl text-center space-y-4 text-white z-10">
             <h3 className="text-3xl border-b-2 sm:w-max p-1 mx-auto font-bold">
@@ -23,7 +23,7 @@ const AccoutingService = () => {
           <img
             className="hidden sm:block  absolute right-0 z-0 max-w-[100px] md:max-w-[150px] lg:max-w-max"
             src="/image/contable-rigth.png"
-            alt=""
+            alt="iconos"
           />
         </div>
       </div>

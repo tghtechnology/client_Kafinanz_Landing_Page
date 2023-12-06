@@ -2,7 +2,7 @@ import "./css/header.css";
 
 const ChooseUs = () => {
   return (
-    <article className="h-auto p-4 md:h-[452px] grid place-content-center relative 3xl:max-w-7xl 3xl:mx-auto">
+    <article id="elect" className="h-auto p-4 md:h-[452px] grid place-content-center relative 3xl:max-w-7xl 3xl:mx-auto">
       <div className="container mx-auto px-2 py-6 text-center ">
         <img
           src="/image/icons-left.svg"
@@ -11,7 +11,7 @@ const ChooseUs = () => {
         />
         <img
           src="/image/derecha.svg"
-          alt=""
+          alt="iconos"
           className="absolute top-5 right-0"
         />
         <p className="text-5xl font-extrabold bg-clip-text bg-gradient-to-b from-[#4F0F64] to-[#CB0D35] text-transparent">

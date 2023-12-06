@@ -1,25 +1,14 @@
+import { scrollToSection } from "../helpers/naviSection";
 import "./css/header.css";
 
 const Header = () => {
-  const scrollToSection = (id) => {
-    const target = document.getElementById(id);
-    if (target) {
-      const offset = 100; // Ajusta este valor según tu preferencia de desplazamiento adicional
-      const targetOffset = target.offsetTop - offset;
-      window.scrollTo({
-        top: targetOffset,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
-    <section className="container mx-auto max-w-full relative w-full h-auto pb-36 overflow-hidden">
+    <section className="container mx-auto max-w-full relative w-full h-auto pb-36 overflow-hidden section">
       <div className="max-w-7xl mx-auto">
         <div className="lg:flex lg:pl-20 lg:justify-start z-20 relative">
           <div className="flex flex-col text-center justify-start pt-14">
             {/* TEXTOS */}
-            <div className="max-w-5xl max-h-[199px] z-10">
+            <div className="max-w-5xl md:max-h-[199px] z-10">
               <p className="text-yellow-dark text-3xl font-poppins font-semibold px-1 lg:text-start lg:text-4xl">
                 Transformamos su visión financiera:
               </p>
@@ -39,7 +28,7 @@ const Header = () => {
             </div>
 
             {/* BOTÓN DE CONTACTO */}
-            <div className="container flex justify-center items-center mt-40 ml:0 md:mt-32 md:ml-7  lg:justify-start">
+            <div className="container flex justify-center items-center mt-14 ml:0 md:mt-32 md:ml-7  lg:justify-start">
               <a
                 href="#"
                 className="text-white bg-blue-dark text-lg font-extrabold px-8 py-4 rounded-[30px] uppercase"

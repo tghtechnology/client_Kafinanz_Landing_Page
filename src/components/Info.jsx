@@ -1,6 +1,6 @@
 const Info = () => {
   return (
-    <section className="bg-[url('/image/info.png')] bg-no-repeat bg-cover lg:h-[704px] relative  bg-right py-8 md:py-3 px-4 md:pl-7">
+    <section className="bg-[url('/image/info.webp')] bg-no-repeat bg-cover lg:h-[704px] relative  bg-right py-8 md:py-3 px-4 md:pl-7">
       <div className="bg-gradient-to-r z-0 from-purple-950 to-red-900 absolute top-0 left-0 bottom-0 right-0 opacity-60"></div>
       <article className="z-10 relative 3xl:max-w-7xl 3xl:mx-auto">
         <h4 className="font-bold my-8 md:py-14 text-white text-xl md:text-2xl max-w-md md:max-w-max before:content-[''] after:block after:bg-white after:h-1 after:rounded-md">
