@@ -11,7 +11,7 @@ const ChooseUs = () => {
         />
         <img
           src="/image/derecha.svg"
-          alt=""
+          alt="iconos"
           className="absolute top-5 right-0"
         />
         <p className="text-5xl font-extrabold bg-clip-text bg-gradient-to-b from-[#4F0F64] to-[#CB0D35] text-transparent">

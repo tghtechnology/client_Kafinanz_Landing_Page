@@ -14,6 +14,7 @@ const Advantages = () => {
       <img
         className="max-w-[252px] md:absolute md:-bottom-10 lg:-bottom-3 xl:bottom-0 md:right-0"
         src="/image/icons-left.svg"
+        alt="iconos"
       />
     </div>
   );

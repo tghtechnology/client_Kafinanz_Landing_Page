@@ -108,6 +108,7 @@ const Contact = () => {
               name="fullname"
               onChange={getAllValues}
               placeholder="Nombre Completo"
+              aria-label="Nombre"
             />
           </div>
           <div className="">
@@ -118,6 +119,7 @@ const Contact = () => {
               name="email"
               onChange={getAllValues}
               placeholder="Correo"
+              aria-label="Correo"
             />
           </div>
           <div className="">
@@ -129,6 +131,7 @@ const Contact = () => {
               name="phone"
               onChange={getAllValues}
               placeholder="Telefono"
+              aria-label="Telefono"
             />
           </div>
           <div className="">
@@ -138,6 +141,7 @@ const Contact = () => {
               onChange={getAllValues}
               value={values.department} // Asegúrate de que el valor del departamento esté configurado correctamente
               name="department"
+              aria-label="Departamento"
             >
               <option value="department">Departamentos</option>
               {depart.map((depart) => (
@@ -154,6 +158,7 @@ const Contact = () => {
               value={values.message}
               onChange={getAllValues}
               placeholder="Descripcion del Mensaje"
+              aria-label="Descripcion"
             />
           </div>
 

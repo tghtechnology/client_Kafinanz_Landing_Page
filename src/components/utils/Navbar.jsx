@@ -12,7 +12,7 @@ const Navbar = () => {
           <Link to="/">
             <img src="/image/K-Logo.svg" alt="Logo" className="w-[100px]" />
           </Link>
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden" aria-label="menu">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

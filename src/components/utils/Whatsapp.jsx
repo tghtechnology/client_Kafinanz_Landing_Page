@@ -19,11 +19,12 @@ const Whatsapp = () => {
         onClick={handleWhatsAppClick}
         onMouseEnter={() => setShowMessage(true)}
         onMouseLeave={() => setShowMessage(false)}
+        aria-label="whatsapp"
       >
         <img
           src="/image/whatsapp.svg"
           // src="/image/whatsapp.png"
-          alt=""
+          alt="logo whatsapp"
           className="text-5xl max-w-[70px] text-green-500 bg-green-500 rounded-full p-3"
         />
       </button>
