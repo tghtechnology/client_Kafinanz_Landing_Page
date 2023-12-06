@@ -1,8 +1,8 @@
-section{
+.section{
     background: linear-gradient(180deg, rgba(94,12,95,1) 0%, rgba(159,6,72,1) 74%, rgba(203,14,53,1) 100%);
 }
 
-section .wave{
+.section .wave{
     position: absolute;
     bottom: 0;
     left: 0;

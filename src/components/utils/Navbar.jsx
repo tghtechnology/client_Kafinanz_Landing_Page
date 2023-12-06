@@ -1,25 +1,17 @@
 import { useState } from "react";
+import { scrollToSection } from "../../helpers/naviSection";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const scrollToSection = (id) => {
-    const target = document.getElementById(id);
-    if (target) {
-      const offset = 100; // Ajusta este valor según tu preferencia de desplazamiento adicional
-      const targetOffset = target.offsetTop - offset;
-      window.scrollTo({
-        top: targetOffset,
-        behavior: "smooth",
-      });
-    }
-  };
 
   return (
     <div className="sticky top-0 bg-white z-50">
       <div className="3xl:max-w-7xl 3xl:mx-auto px-3 py-2 md:flex md:flex-row justify-between">
         <div className="flex justify-between md:justify-start">
-          <img src="/image/K-Logo.svg" alt="Logo" className="w-[100px]" />
+          <Link to="/">
+            <img src="/image/K-Logo.svg" alt="Logo" className="w-[100px]" />
+          </Link>
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,17 +34,26 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "-translate-x-[800px] h-0"
           }`}
         >
-          <a href="#" className="text-base font-semibold text-purple-black">
-            ¿Porque elegirnos?
-          </a>
-          <a
-            onClick={() => scrollToSection("services")}
-            href="#"
+          <button
             className="text-base font-semibold text-purple-black"
+            type="button"
+            onClick={() => {
+              setIsOpen(!isOpen);
+              scrollToSection("elect");
+            }}
+          >
+            ¿Porque elegirnos?
+          </button>
+          <button
+            className="text-base font-semibold text-purple-black"
+            type="button"
+            onClick={() => {
+              setIsOpen(!isOpen);
+              scrollToSection("services");
+            }}
           >
             Nuestro Servicio
-          </a>
-
+          </button>
         </nav>
       </div>
     </div>
