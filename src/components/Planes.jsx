@@ -2,7 +2,7 @@ const Planes = () => {
   return (
     <>
       <div className="container mx-auto mt-14 p-2">
-        <h1 className="text-center uppercase font-bold text-3xl bg-clip-text bg-gradient-to-b from-[#4f245e] to-[#eca305] text-transparent mb-8">
+        <h1 className="text-center uppercase font-bold text-3xl bg-clip-text bg-gradient-to-l from-[#c9c762] to-[#eca305] text-transparent mb-8">
           ¿Ya conocias nuestros planes?
         </h1>
         <div className="relative grid gap-4 text-white md:grid-cols-planes-desktop place-content-center md:gap-14 px-5">
