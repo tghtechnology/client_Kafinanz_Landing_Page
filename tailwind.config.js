@@ -1,21 +1,36 @@
 /** @type {import('tailwindcss').Config} */
-import withMT from "@material-tailwind/react/utils/withMT";
 
-export default withMT({
+export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-
-    },
-    listStyleImage: {
-      checkmark: 'url("/img/icons/check-mark.png")',
-    },
-    screens: {
-      'desktop-full': '1600px'
+    extend: {
+      fontFamily : {
+        'poppins': ['Poppins', 'sans-serif']
+      },
+      colors: {
+        'pink-light': '#E00CBD',
+        'blue-dark': '#0847AD',
+        'pink-gray': '#A63884',
+        'orange-ligth': '#EA3D1A',
+        'yellow-dark':'#FFA401',
+        'indigo-black': '#37298C',
+        'purple-black': '#5C0742',
+        
+      },
+      screens: {
+        'cel': '444px',
+        '1xl': '1440px',
+        '3xl': '2100px'
+      },
+      gridTemplateColumns: {
+        'services-movil': 'repeat(2, minmax(0, 160px))',
+        'services-desktop': 'repeat(4, minmax(0, 330px))',
+        'planes-desktop': 'repeat(2, minmax(0, 646px))'
+      }
     }
   },
   plugins: [],
-})
+}
